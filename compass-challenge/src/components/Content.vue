@@ -1,21 +1,20 @@
 <template>
     <div class="column is-half">
-        <section class="section">
-            <img src="../assets/logo.png" />
-            <h1 class="titulo">Let’s discuss
-                on something <strong class="titulo-cor">COOL</strong> together</h1>
-            <ul class="lista">
-                <li class="lista-item">
-                    <ion-icon name="mail-outline"></ion-icon>
-                    <span>challange@compass.com.br</span>
+        <section class="section section-content">
+            <img class="compass-img" src="../assets/logo.png" alt="Compass Uol Icon" />
+            <h1 class="title">Let’s discuss on something <span class="color-title">COOL </span>together</h1>
+            <ul class="list">
+                <li class="list-item">
+                    <img class="icon-compass" src="../assets/email-icon.png"/>
+                    <span class="span-list">challange@compass.com.br</span>
                 </li>
-                <li class="lista-item">
-                    <ion-icon name="call-outline"></ion-icon>
-                    <span>12 3456 3789</span>
+                <li class="list-item">
+                    <img class="icon-compass" src="../assets/telephone-icon.png"/>
+                    <span class="span-list">+12 3456 3789</span>
                 </li>
-                <li class="lista-item">
-                    <ion-icon name="location-outline"></ion-icon>
-                    <span>123 Street 456 House</span>
+                <li class="list-item">
+                    <img class="icon-compass" src="../assets/location-icon.png"/>
+                    <span class="span-list">123 Street 456 House</span>
                 </li>
             </ul>
         </section>
@@ -32,48 +31,69 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.titulo {
-    font-size: 56px;
+
+.icon-compass{
+    width: 1.5rem;
+    height: 1.75rem;
+    margin: 0em 1em -1.8em 0em;
+}
+
+.title {
+    font-size: 3.5em;
     color: #FFFFFF;
     text-align: left;
-    align-items: center;
-    font-family: Inter;
+    font-family: Poppins;
     font-weight: 700;
-    line-height: 67.77px;
-    margin-bottom: 2em;
-
+    line-height: 1.35em;
+    margin-bottom: 1.3em;
+    padding: 0em -0.9em 0em 0em;
 }
 
-.titulo-cor {
+.color-title {
     color: #FFCE00;
+    font-size: 1em;
+    font-family: Poppins;
+    font-weight: 700;
+    line-height: 1.35em;
 }
 
-.lista {
-    width: 499px;
-    height: 250px;
-    gap: 8px;
-    align-items: left;
+.list {
+    width: 31.1875em;
+    height: 15.625em;
+    gap: 0.5em;
 }
 
-.lista-item {
+.list-item {
     text-align: left;
     color: #FFFFFF;
-    width: 499px;
-    height: 78px;
-    gap: 16px;
-    padding: 24px 128px 24px 24px;
-    border-radius: 16px 0px 0px 0px;
+    width: 31.1875em;
+    height: 4.875em;
+    gap: 1em;
+    padding: 1.5rem 8rem 1.5rem 1.5rem;
+    border-radius: 1em 0em 0em 0em;
 }
 
 span {
-    width: 293px;
-    height: 30px;
+    width: 18.3125rem;
+    height: 1.875rem;
     font-family: Poppins;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 500;
-    line-height: 30px;
+    line-height: 1.875rem;
     text-align: left;
     color: #FFFFFF;
+}
+
+.span-list {
+    width: 18.3125rem;
+    height: 1.875rem;
+    font-family: Poppins;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.875rem;
+    text-align: left;
+    color: #FFFFFF;
+    margin: 0em 0em 0em 2em;
 }
 
 ion-icon {
@@ -81,21 +101,25 @@ ion-icon {
     width: 24px;
     height: 24px;
     padding: 3px 0px 3px 0px;
-    gap: 0px;
-    opacity: 0px;
     margin: 0em 1em 0em 0em;
 }
 
-img {
-    width: 433px;
-    height: 60px;
-    margin-bottom: 10em;
+.compass-img {
+    width: 27.0625rem;
+    height: 3.75rem;
+    margin-top: 10.5em;
+    margin-bottom: 5em;
 }
 
 div {
-    width: 499px;
-    height: 725px;
-    gap: 96px;
+    width: 31.1875rem;
+    height: 45.3125rem;
+    gap: 6rem;
+}
+
+.section-content{
+    margin: 0em 4em 0em 7em;
+    padding: 0em 1em 0em 1em;
 }
 
 </style>

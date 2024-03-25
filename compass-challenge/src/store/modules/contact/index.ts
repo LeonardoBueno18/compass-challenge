@@ -3,7 +3,7 @@ import { Module } from "vuex";
 import { State } from "@/store/index"
 import http from "@/http";
 import { ADD_CONTACT } from "@/store/action-type";
-import { NOTIFY } from "@/store/mutation-type";
+import { MAKE_CONTACT, NOTIFY } from "@/store/mutation-type";
 
 
 export interface ContactState {
@@ -12,23 +12,32 @@ export interface ContactState {
 
 export const contact: Module<ContactState, State> = {
     mutations: {
-
-    },
-    actions: {
-        [ADD_CONTACT]({commit}, payload: IForm){
+        [MAKE_CONTACT](state, payload: IForm) {
             const contact = {
                 name: payload.name,
                 email: payload.email,
                 message: payload.message,
                 interest: payload.interest
             } as IForm
-            http.post('contact/', contact)
-            .then(response => {
-                commit(NOTIFY, response.data.msg)
-            })
-            .catch(error => {
-                console.error(error)
-            })
+            state.contact.push(contact)}
+    },
+    actions: {
+        [ADD_CONTACT](state, payload: IForm) {
+            const contact = {
+                name: payload.name,
+                email: payload.email,
+                message: payload.message,
+                interest: payload.interest
+            } as IForm
+            if (contact.interest === '' || contact.name === '' || contact.email === '' || contact.message === '') {
+                alert("Preencha todos os campos!")
+            } else {
+                http.post('contact/', contact).then(response => {alert(response.data.msg)})
+                    .catch(error => {
+                        alert (error.response.data.msg)
+                    })
+
+            }
         }
     }
 }

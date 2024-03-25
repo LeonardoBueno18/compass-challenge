@@ -1,22 +1,17 @@
 <template>
-  <section class="section1">
-    <div class="columns is-full">
-      <Content />
-      <Form />
-    </div>
-  </section>
+  <main class="columns is-gapless section-app">
+    <router-view></router-view>
+  </main>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import Form from './components/Form.vue';
-import Content from './components/Content.vue';
+
 
 export default defineComponent({
   name: 'App',
   components: {
-    Form,
-    Content,
+
   }
 });
 </script>
@@ -25,21 +20,28 @@ export default defineComponent({
 #app {
   text-align: center;
   align-items: center;
-  background-color: black;
+  background: black;
   width: 100%;
-  height: 110vh;
-  top: 95px;
-  left: 108px;
-  gap: 58px;
-  opacity: 0px;
+  height: 100%;
+  top: 5.9375rem;
+  left: 6.75rem;
+  gap: 3.625rem;
+}
+html, body{
+  height: 100%;
+  margin:0;
 }
 
-.section1 {
-  width: 1225px;
-  height: 834px;
-  top: 95px;
-  left: 108px;
-  gap: 58px;
-  opacity: 0px;
+.section-app {
+  width: 76.5625rem;
+  height: 52.125rem;
+  top: 5.9375rem;
+  left: 6.75rem;
+  gap: 3.625rem;
+  margin: 0em 0em 0em 0em;
+  align-items: center;
+}
+.principal{
+  margin: -60px -9px 0px 130px;
 }
 </style>
