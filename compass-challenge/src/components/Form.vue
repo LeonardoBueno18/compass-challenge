@@ -7,7 +7,7 @@
                 <input type="email" id="email" name="email" placeholder="Your email" v-model="formData[0].email">
                 <textarea class="message" placeholder="Your message" v-model="formData[0].message"></textarea>
                 <button class="button is-black" type="submit">
-                    <i class="far fa-paper-plane"></i>
+                    <img class="icon-compass" src="../assets/send-message.png"/>
                     Send Message
                 </button>
             </form>
@@ -79,6 +79,12 @@ export default defineComponent({
 </script>
 
 <style scoped>
+.compass-img {
+    width: 27.0625rem;
+    height: 3.75rem;
+    margin-top: 10.5em;
+    margin-bottom: 5em;
+}
 ::-webkit-input-placeholder {
     text-decoration: none;
     color: #000000;

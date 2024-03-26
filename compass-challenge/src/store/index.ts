@@ -14,10 +14,12 @@ export const store = createStore<State>({
     state: {
         contact: {
             contact: []
-        },
+        }
     },
     mutations: {
-
+        [NOTIFY](state, payload: string) {
+            alert(payload)
+        }
     },
     actions: {
 
