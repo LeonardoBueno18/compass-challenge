@@ -30,7 +30,7 @@ export const contact: Module<ContactState, State> = {
                 interest: payload.interest
             } as IForm
             if (contact.interest === '' || contact.name === '' || contact.email === '' || contact.message === '') {
-                state.commit(NOTIFY, "Preencha todos os campos!")
+                state.commit(NOTIFY, "Please ensure to fill out all the fields!")
             } else {
                 http.post('contact/', contact).then(response => {state.commit(NOTIFY, response.data.msg)})
                     .catch(error => {
