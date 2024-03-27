@@ -40,6 +40,8 @@ This command produces a dist folder with all the compiled and minified files, re
 
 This application provides an intuitive user interface with an interactive form. To send a message to Compass, follow the steps below:
 
+![Application Layout](./src/assets/application-layout.png)
+
 1. Locate the form on the main page of the application.
 2. Fill in the required fields with the appropriate information.
 3. Once you've filled out the form, click the 'Submit' button to send your message.
