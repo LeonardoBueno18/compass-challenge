@@ -6,7 +6,7 @@
             <ul class="list">
                 <li class="list__item">
                     <img class="icon__compass" src="../assets/email-icon.png"/>
-                    <span class="span__list">challange@compass.com.br</span>
+                    <span class="span__list">challenge@compass.com.br</span>
                 </li>
                 <li class="list__item">
                     <img class="icon__compass" src="../assets/telephone-icon.png"/>
