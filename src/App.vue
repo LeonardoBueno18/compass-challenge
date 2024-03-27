@@ -1,5 +1,5 @@
 <template>
-  <main class="columns is-gapless section-app">
+  <main class="columns is-gapless section__app">
     <router-view></router-view>
   </main>
 </template>
@@ -29,10 +29,10 @@ export default defineComponent({
 }
 html, body{
   height: 100%;
-  margin:0;
+  margin: 0em;
 }
 
-.section-app {
+.section__app {
   width: 76.5625rem;
   height: 52.125rem;
   top: 5.9375rem;
@@ -40,8 +40,5 @@ html, body{
   gap: 3.625rem;
   margin: 0em 0em 0em 0em;
   align-items: center;
-}
-.principal{
-  margin: -60px -9px 0px 130px;
 }
 </style>

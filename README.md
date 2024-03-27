@@ -2,8 +2,13 @@
 
 Welcome to the Compass Challenge! This challenge is designed to test skills in vue3.
 ## Project setup
+
 ```
 npm install
+
+npm install vuex
+
+npm install axios
 ```
 
 ### Compiles and hot-reloads for development

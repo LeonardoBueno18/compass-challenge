@@ -3,10 +3,10 @@
         <section class="form">
             <Interests v-on:-interest-selected="setInterest" />
             <form @submit.prevent="sendContact">
-                <input type="text" id="name" name="name" placeholder="Your Name" v-model="formData[0].name">
-                <input type="email" id="email" name="email" placeholder="Your email" v-model="formData[0].email">
-                <textarea class="message" placeholder="Your message" v-model="formData[0].message"></textarea>
-                <button class="button is-black" type="submit">
+                <input class="form__input" type="text" id="name" name="name" placeholder="Your Name" v-model="formData[0].name">
+                <input class="form__input" type="email" id="email" name="email" placeholder="Your email" v-model="formData[0].email">
+                <textarea class="form__input" placeholder="Your message" v-model="formData[0].message"></textarea>
+                <button id="form__button" class="button is-black" type="submit">
                     <img class="icon-compass" src="../assets/send-message.png"/>
                     Send Message
                 </button>
@@ -49,26 +49,7 @@ export default defineComponent({
             };
         },
         setInterest(value: string) {
-            switch (value) {
-                case 'Front-end':
-                    this.formData[0].interest = value;
-                    break;
-                case 'Back-end':
-                    this.formData[0].interest = value;
-                    break;
-                case 'Mobile':
-                    this.formData[0].interest = value;
-                    break;
-                case 'AI':
-                    this.formData[0].interest = value;
-                    break;
-                case 'Other':
-                    this.formData[0].interest = value;
-                    break;
-                default:
-                    confirm('Please select an interest');
-                    break;
-            }
+            this.formData[0].interest = value;
         }
     },
     setup() {
@@ -79,12 +60,6 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.compass-img {
-    width: 27.0625rem;
-    height: 3.75rem;
-    margin-top: 10.5em;
-    margin-bottom: 5em;
-}
 ::-webkit-input-placeholder {
     text-decoration: none;
     color: #000000;
@@ -95,31 +70,21 @@ export default defineComponent({
     text-align: left;
 }
 
-input {
+.form__input {
     height: 3.375em;
-    margin: 0em 0em 4em 1em;
+    margin: 1.5em 0em 1.5em 1em;
     width: 37.5em;
     border-bottom: 0.1875em solid #000000;
     background-color: #FFCE00;
 }
 
-
-textarea {
-    height: 3.375em;
-    margin: 0em 0em 4em 1em;
-    width: 37.5em;
-    border-bottom: 0.1875em solid #000000;
-    background-color: #FFCE00;
-    font-weight: 700;
-}
-
-button {
+#form__button {
     width: 29.5em;
     height: 3.7em;
     padding: 1.5em 4em 1.5em 4em;
     gap: 16px;
     border-radius: 16px;
-    color: #000000;
+    color: white;
     font-family: Poppins;
     font-size: 20px;
     font-weight: 500;
@@ -136,10 +101,6 @@ button {
     gap: 4em;
     border-radius: 1.5em 0em 1.5em 0.125em;
     margin: 7em -10em 0em 3em;
-}
-
-div{
-    margin: 0em 0em 0em 0em;
 }
 </style>
 ```
