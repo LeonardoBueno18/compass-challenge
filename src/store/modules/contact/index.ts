@@ -34,7 +34,7 @@ export const contact: Module<ContactState, State> = {
             } else {
                 http.post('contact/', contact).then(response => {state.commit(NOTIFY, response.data.msg)})
                     .catch(error => {
-                        state.commit(NOTIFY, error.data.msg)
+                        state.commit(NOTIFY, error.message + ': An error occurred while sending the message! Try again later.')
                     })
 
             }
